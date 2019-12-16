@@ -28,3 +28,133 @@ body {
   font-size: 25px;
   align-self: center;
 }
+
+.meme_container {
+  display: flex;
+  width: 90%;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 0;
+  
+}
+
+.meme-form {
+ max-width: 100%;
+ min-width: 350px;
+ margin-bottom: 20px;
+}
+
+.input_meme {
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  padding: 10px;
+  margin: 5px auto;
+}
+
+.input_meme:first-of-type {
+  margin-right: 20px;
+}
+
+/* button  */
+
+.button {
+  display:block;
+  position: relative;
+  color: rgba(2, 2, 2, 0.7);
+  background: none;
+  outline: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  font-weight: 700;
+  letter-spacing: .05em;
+  margin: 10px auto;
+}
+
+ .button > span {
+    position: relative;
+    z-index: 1;
+    display: block;
+    min-width: 2px;
+    padding: 25px;
+    border-radius: 2em;
+    background-color: white;
+    border: 1px solid darken(white, 30%);
+    box-shadow: -5px 5px 10px rgba(0,0,0,0.2);
+    transition: transform .1s, box-shadow .2s, background-color .2s;
+  }
+
+  .button::after {
+    content: '';
+    position: absolute;
+    top: -1em;
+    bottom: -1em;
+    left: -1em;
+    right: -1em;
+    border-radius: 4em;
+    box-shadow: 0 0 0px rgba(0,0,0,0.2), inset 0 0 0px rgba(0,0,0,0.2);
+    transition: box-shadow .1s;
+  }
+  
+  .button:hover > span,
+  .button:focus > span{
+     background-color: lighten(white, 20%);
+
+  }
+
+  .button:active > span {
+      background-color: white;
+      transform: scale(0.9);
+      box-shadow: -2px 2px 5px rgba(0,0,0,0.2);
+  }
+
+    .button >span::after {
+      box-shadow: 0 0 2px rgba(0,0,0,0.2), inset -3px 3px 1em rgba(0,0,0,0.2);
+    }
+
+    .meme_block{
+      align-self: center;
+      position: relative;
+      width: 500px;
+      margin: auto;
+    }
+
+    .meme_img{
+      width: 100%;
+    }
+
+    .meme_text {
+      position: absolute;
+      width: 80%;
+      text-align: center;
+      left: 50%;
+      transform: translateX(-50%);
+      margin: 15px 0;
+      padding: 0 5px;
+      font-family: impact, sans-serif;
+      font-size: 2em;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: rgb(255, 255, 255);
+      text-shadow:
+      2px 2px 0 #000,
+      -2px -2px 0 #000,
+      2px -2px 0 #000,
+      -2px 2px 0 #000,
+      0 2px 0 #000,
+      2px 0 0 #000,
+      0 -2px 0 #000,
+      -2px 0 0 #000,
+      2px 2px 5px #000;
+    }
+    .meme_text-top {
+      top: 0;
+    }
+
+    .meme_text-bottom{
+      bottom: 0;
+    }
+
+
+  

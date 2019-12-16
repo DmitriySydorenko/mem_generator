@@ -39,6 +39,7 @@ class MemGenerator extends React.Component {
   render() {
     return (
       <section className="section_meme">
+          <div className="meme_container">
         <form className="meme-form">
           <input
             className="input_meme"
@@ -59,15 +60,19 @@ class MemGenerator extends React.Component {
 
           <button type="button"
                   className="button button_meme"
-                  onClick={this.randomImgChoose}>Generate meme</button>
+                  onClick={this.randomImgChoose}>
+                      <span>Generate meme</span>
+                      </button>
         </form>
-        <div className="meme_container">
+        <div className="meme_block">
                     <img className="meme_img" src={this.state.randomImg} alt="meme" />
-                    <h2 className="meme_text-top">{this.state.topText}</h2>
-                    <h2 className="nene_text-bottom">{this.state.bottomText}</h2>
+                    <h2 className="meme_text meme_text-top">{this.state.topText}</h2>
+                    <h2 className="meme_text meme_text-bottom">{this.state.bottomText}</h2>
+                </div>
                 </div>
       </section>
     );
   }
 }
+
 export default MemGenerator
